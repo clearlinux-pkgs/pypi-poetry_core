@@ -4,7 +4,7 @@
 #
 Name     : pypi-poetry_core
 Version  : 1.0.8
-Release  : 6
+Release  : 7
 URL      : https://files.pythonhosted.org/packages/51/be/c4dce945cf7de2dc38d94cf724525f2a97d83b18403eeeb87eecb715dada/poetry-core-1.0.8.tar.gz
 Source0  : https://files.pythonhosted.org/packages/51/be/c4dce945cf7de2dc38d94cf724525f2a97d83b18403eeeb87eecb715dada/poetry-core-1.0.8.tar.gz
 Summary  : Poetry PEP 517 Build Backend
