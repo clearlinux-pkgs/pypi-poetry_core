@@ -4,7 +4,7 @@
 #
 Name     : pypi-poetry_core
 Version  : 1.4.0
-Release  : 16
+Release  : 17
 URL      : https://files.pythonhosted.org/packages/ba/80/373557c83c79d0cc7add2c123be04c29d81b0ac3e631257d8d7dc0a3cf9c/poetry_core-1.4.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ba/80/373557c83c79d0cc7add2c123be04c29d81b0ac3e631257d8d7dc0a3cf9c/poetry_core-1.4.0.tar.gz
 Summary  : Poetry PEP 517 Build Backend
