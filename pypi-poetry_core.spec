@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-poetry_core
-Version  : 1.6.0
-Release  : 21
-URL      : https://files.pythonhosted.org/packages/b8/7d/8654777b23919a77ff34f0ef5ba048102fb0d87e23515ccd715e53ac726d/poetry_core-1.6.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/b8/7d/8654777b23919a77ff34f0ef5ba048102fb0d87e23515ccd715e53ac726d/poetry_core-1.6.0.tar.gz
+Version  : 1.6.1
+Release  : 22
+URL      : https://files.pythonhosted.org/packages/20/e8/e0a80cc355bc207fb1760160344e978f39d683c35e1230f71b8916bf3a50/poetry_core-1.6.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/20/e8/e0a80cc355bc207fb1760160344e978f39d683c35e1230f71b8916bf3a50/poetry_core-1.6.1.tar.gz
 Summary  : Poetry PEP 517 Build Backend
 Group    : Development/Tools
 License  : Apache-2.0 BSD-2-Clause MIT Python-2.0
@@ -55,10 +55,10 @@ python3 components for the pypi-poetry_core package.
 
 
 %prep
-%setup -q -n poetry_core-1.6.0
-cd %{_builddir}/poetry_core-1.6.0
+%setup -q -n poetry_core-1.6.1
+cd %{_builddir}/poetry_core-1.6.1
 pushd ..
-cp -a poetry_core-1.6.0 buildavx2
+cp -a poetry_core-1.6.1 buildavx2
 popd
 
 %build
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684174780
+export SOURCE_DATE_EPOCH=1685402760
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
