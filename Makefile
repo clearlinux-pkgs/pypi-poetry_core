@@ -1,5 +1,5 @@
 PKG_NAME := pypi-poetry_core
-URL = https://files.pythonhosted.org/packages/20/e8/e0a80cc355bc207fb1760160344e978f39d683c35e1230f71b8916bf3a50/poetry_core-1.6.1.tar.gz
+URL = https://files.pythonhosted.org/packages/cb/1c/af7f886e723b2dfbaea9b8a739153f227b386dd856cf956f9fd0ed0a502b/poetry_core-1.7.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

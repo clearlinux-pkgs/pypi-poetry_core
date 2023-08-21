@@ -4,13 +4,13 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-poetry_core
-Version  : 1.6.1
-Release  : 22
-URL      : https://files.pythonhosted.org/packages/20/e8/e0a80cc355bc207fb1760160344e978f39d683c35e1230f71b8916bf3a50/poetry_core-1.6.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/20/e8/e0a80cc355bc207fb1760160344e978f39d683c35e1230f71b8916bf3a50/poetry_core-1.6.1.tar.gz
+Version  : 1.7.0
+Release  : 23
+URL      : https://files.pythonhosted.org/packages/cb/1c/af7f886e723b2dfbaea9b8a739153f227b386dd856cf956f9fd0ed0a502b/poetry_core-1.7.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/cb/1c/af7f886e723b2dfbaea9b8a739153f227b386dd856cf956f9fd0ed0a502b/poetry_core-1.7.0.tar.gz
 Summary  : Poetry PEP 517 Build Backend
 Group    : Development/Tools
-License  : Apache-2.0 BSD-2-Clause MIT Python-2.0
+License  : Apache-2.0 BSD-2-Clause MIT
 Requires: pypi-poetry_core-license = %{version}-%{release}
 Requires: pypi-poetry_core-python = %{version}-%{release}
 Requires: pypi-poetry_core-python3 = %{version}-%{release}
@@ -21,6 +21,7 @@ BuildRequires : buildreq-distutils3
 
 %description
 # Poetry Core
+[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
 [![PyPI version](https://img.shields.io/pypi/v/poetry-core)](https://pypi.org/project/poetry-core/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/poetry-core)](https://pypi.org/project/poetry-core/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -55,10 +56,10 @@ python3 components for the pypi-poetry_core package.
 
 
 %prep
-%setup -q -n poetry_core-1.6.1
-cd %{_builddir}/poetry_core-1.6.1
+%setup -q -n poetry_core-1.7.0
+cd %{_builddir}/poetry_core-1.7.0
 pushd ..
-cp -a poetry_core-1.6.1 buildavx2
+cp -a poetry_core-1.7.0 buildavx2
 popd
 
 %build
@@ -66,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685402760
+export SOURCE_DATE_EPOCH=1692630163
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -99,7 +100,6 @@ cp %{_builddir}/poetry_core-%{version}/src/poetry/core/_vendor/packaging/LICENSE
 cp %{_builddir}/poetry_core-%{version}/src/poetry/core/_vendor/packaging/LICENSE.BSD %{buildroot}/usr/share/package-licenses/pypi-poetry_core/fdc0e4eabc45522b079deff7d03d70528d775dc0 || :
 cp %{_builddir}/poetry_core-%{version}/src/poetry/core/_vendor/pyrsistent/LICENSE.mit %{buildroot}/usr/share/package-licenses/pypi-poetry_core/4fdb72bba2df212e4c64c262eaebc0c2ac87cb6d || :
 cp %{_builddir}/poetry_core-%{version}/src/poetry/core/_vendor/tomli/LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/9da6ca26337a886fb3e8d30efd4aeda623dc9ade || :
-cp %{_builddir}/poetry_core-%{version}/src/poetry/core/_vendor/typing_extensions.LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/f456f46e1dcbc636c8451a46426568705fe98a98 || :
 cp %{_builddir}/poetry_core-%{version}/tests/masonry/builders/fixtures/case_sensitive_exclusions/LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/84661790a5df00ab944c2d37978d6ce5ac88e554 || :
 cp %{_builddir}/poetry_core-%{version}/tests/masonry/builders/fixtures/complete/LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/84661790a5df00ab944c2d37978d6ce5ac88e554 || :
 cp %{_builddir}/poetry_core-%{version}/tests/masonry/builders/fixtures/default_src_with_excluded_data/LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/84661790a5df00ab944c2d37978d6ce5ac88e554 || :
@@ -136,7 +136,6 @@ popd
 /usr/share/package-licenses/pypi-poetry_core/9addd8ed1823a0daf664e416466ddad2466ee40f
 /usr/share/package-licenses/pypi-poetry_core/9da6ca26337a886fb3e8d30efd4aeda623dc9ade
 /usr/share/package-licenses/pypi-poetry_core/aa1d60525fded9648cab0e59a4338652671ad600
-/usr/share/package-licenses/pypi-poetry_core/f456f46e1dcbc636c8451a46426568705fe98a98
 /usr/share/package-licenses/pypi-poetry_core/fdc0e4eabc45522b079deff7d03d70528d775dc0
 
 %files python
