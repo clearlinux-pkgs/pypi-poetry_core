@@ -6,10 +6,10 @@
 # autospec commit: f4a13a5
 #
 Name     : pypi-poetry_core
-Version  : 2.0.0
-Release  : 32
-URL      : https://files.pythonhosted.org/packages/db/ec/dbd9cedc8b68309f1f4c0160355890b4f65f51901b31b1831dbf8c93d6c0/poetry_core-2.0.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/db/ec/dbd9cedc8b68309f1f4c0160355890b4f65f51901b31b1831dbf8c93d6c0/poetry_core-2.0.0.tar.gz
+Version  : 2.0.1
+Release  : 33
+URL      : https://files.pythonhosted.org/packages/c4/f5/89d11008714e0a49cab9cba7cce89c66ea5a94f37cc6d283798cc1725fac/poetry_core-2.0.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/c4/f5/89d11008714e0a49cab9cba7cce89c66ea5a94f37cc6d283798cc1725fac/poetry_core-2.0.1.tar.gz
 Summary  : Poetry PEP 517 Build Backend
 Group    : Development/Tools
 License  : Apache-2.0 BSD-2-Clause BSD-3-Clause MIT
@@ -57,13 +57,13 @@ python3 components for the pypi-poetry_core package.
 
 
 %prep
-%setup -q -n poetry_core-2.0.0
-cd %{_builddir}/poetry_core-2.0.0
+%setup -q -n poetry_core-2.0.1
+cd %{_builddir}/poetry_core-2.0.1
 pushd ..
-cp -a poetry_core-2.0.0 buildavx2
+cp -a poetry_core-2.0.1 buildavx2
 popd
 pushd ..
-cp -a poetry_core-2.0.0 buildapx
+cp -a poetry_core-2.0.1 buildapx
 popd
 
 %build
@@ -71,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1736003331
+export SOURCE_DATE_EPOCH=1736796386
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -134,6 +134,7 @@ cp %{_builddir}/poetry_core-%{version}/src/poetry/core/_vendor/packaging/LICENSE
 cp %{_builddir}/poetry_core-%{version}/src/poetry/core/_vendor/tomli/LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/9da6ca26337a886fb3e8d30efd4aeda623dc9ade || :
 cp %{_builddir}/poetry_core-%{version}/tests/masonry/builders/fixtures/case_sensitive_exclusions/LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/84661790a5df00ab944c2d37978d6ce5ac88e554 || :
 cp %{_builddir}/poetry_core-%{version}/tests/masonry/builders/fixtures/complete/LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/84661790a5df00ab944c2d37978d6ce5ac88e554 || :
+cp %{_builddir}/poetry_core-%{version}/tests/masonry/builders/fixtures/complete_dynamic/LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/84661790a5df00ab944c2d37978d6ce5ac88e554 || :
 cp %{_builddir}/poetry_core-%{version}/tests/masonry/builders/fixtures/complete_new/LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/84661790a5df00ab944c2d37978d6ce5ac88e554 || :
 cp %{_builddir}/poetry_core-%{version}/tests/masonry/builders/fixtures/default_src_with_excluded_data/LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/84661790a5df00ab944c2d37978d6ce5ac88e554 || :
 cp %{_builddir}/poetry_core-%{version}/tests/masonry/builders/fixtures/default_with_excluded_data/LICENSE %{buildroot}/usr/share/package-licenses/pypi-poetry_core/84661790a5df00ab944c2d37978d6ce5ac88e554 || :
